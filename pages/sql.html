@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Fill in the Blanks | Interview Arcade</title>
+    <link rel="stylesheet" href="../styles/sql.css">
+</head>
+<body>
+    <header class="arcade-header">
+        <a href="../modules.html" class="nav-link">← Back to Modules</a>
+        <h1>SQL: Fill in the Blanks</h1>
+        <p class="subtitle">Complete the queries to retrieve the correct data.</p>
+    </header>
+
+    <main class="game-container">
+        <div class="stats-panel">
+            <div class="stat-box">Challenge: <span id="current-index">1</span> / 5</div>
+            <div class="stat-box">Correct: <span id="score">0</span></div>
+        </div>
+
+        <div class="query-card">
+            <h2 id="query-title">Loading...</h2>
+            <div id="query-display" class="sql-code">
+                </div>
+            <button id="submit-btn">Check Query</button>
+        </div>
+
+        <div id="feedback" class="feedback-area hidden">
+            <p id="feedback-message"></p>
+            <p id="explanation" class="explanation-text"></p>
+            <button id="next-btn">Next Challenge</button>
+        </div>
+
+        <div id="game-over" class="hidden">
+            <h2>Module Complete</h2>
+            <p>You’ve finished the SQL module.</p>
+            <button onclick="location.reload()">Restart</button>
+        </div>
+    </main>
+
+    <script type="module" src="../games/sql.js"></script>
+</body>
+</html>

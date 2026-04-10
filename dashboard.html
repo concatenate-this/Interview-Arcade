@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Dashboard | Interview Arcade</title>
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+    <header class="arcade-header">
+        <a href="index.html" class="nav-link">← Back to Home</a>
+        <h1>Progress Dashboard</h1>
+        <p class="subtitle">Track your interview preparation stats.</p>
+    </header>
+
+    <main class="dashboard-container">
+        <section class="overall-progress-section">
+            <h2>Overall Completion</h2>
+            <div class="progress-bar-container">
+                <div id="overall-progress-fill" class="progress-bar-fill" style="width: 0%;"></div>
+            </div>
+            <p id="overall-progress-text">0 / 10 Modules Completed (0%)</p>
+        </section>
+
+        <section class="module-grid" id="module-grid">
+            </section>
+        
+        <div class="controls">
+            <button id="clear-data-btn" class="danger-btn">Clear All Progress</button>
+        </div>
+    </main>
+
+    <script src="scripts/storage.js"></script>
+</body>
+</html>
