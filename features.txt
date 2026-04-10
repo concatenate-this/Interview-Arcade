@@ -1,139 +1,121 @@
-PROJECT: Interview Arcade
+INTERVIEW ARCADE — FEATURES
+===========================
+Each feature corresponds to one module. Implement it in the
+matching file under pages/ and games/. Keep it functional,
+clean, and browser-ready with no backend.
 
-Feature 1: Tic Tac Toe + OOP Quiz
-Description:
-Create a two-player tic tac toe game. After the game ends, the losing player must answer 5 OOP MCQs ( provide option - attempt in cpp / javascript / python and based on user select procide question layout)
+---
 
-Expected Output:
-- Functional 3x3 grid
-- Detect winner or draw
-- Show OOP quiz after game ends
-- Display score
+FEATURE 1 — Tic Tac Toe + OOP Quiz
+Files: pages/tictactoe.html, games/tictactoe.js
+---
+Two players take turns on a standard 3x3 Tic Tac Toe board.
+When a player loses a round, they are shown 5 OOP-based MCQs
+(e.g. inheritance, polymorphism, encapsulation) before the
+next round starts. Wrong answers show a brief explanation.
+Score is tracked across rounds. Questions can be sourced from
+data/questions.js.
 
-Testing:
-- Check win conditions
-- Check quiz trigger
-- Validate MCQ answers
+---
 
+FEATURE 2 — Memory Card Game
+Files: pages/memory.html, games/memory.js
+---
+A grid of face-down cards (e.g. 4x4). Each card contains a
+technical term or concept. Cards come in pairs — the player
+flips two at a time to find matching pairs. Unmatched cards
+flip back. Track number of attempts and time taken. Game ends
+when all pairs are matched. Terms can cover CS concepts like
+"Stack–LIFO", "Queue–FIFO", etc.
 
-Feature 2: Memory Card Game
-Description:
-Create 16 cards (8 pairs) with technical terms and their meanings.
+---
 
-Expected Output:
-- Flip animation
-- Match pairs correctly
-- Lock matched cards
+FEATURE 3 — Aptitude Quiz
+Files: pages/aptitude.html, games/aptitude.js
+---
+A timed multiple-choice quiz with aptitude and reasoning
+questions. Each question has 4 options. On a wrong answer,
+show a short explanation of the correct answer before moving
+on. Display final score at the end with a performance summary.
+Questions can be loaded from data/questions.js.
 
-Testing:
-- Matching logic
-- Flip behavior
-- Game completion
+---
 
+FEATURE 4 — Resume Keyword Matcher
+Files: pages/resume.html, games/resume.js
+---
+User selects or types a job role (e.g. "Frontend Developer").
+They then paste their resume text into a text area. The tool
+checks how many relevant keywords for that role appear in the
+resume and shows a match percentage. Missing keywords are
+highlighted so the user knows what to add. No file parsing
+needed — plain text input is enough.
 
-Feature 3: Aptitude Quiz
-Description:
-MCQ-based quiz with explanation for wrong answers.
+---
 
-Expected Output:
-- Question display
-- Option selection
-- Explanation shown on wrong answer
+FEATURE 5 — SQL Fill in the Blanks
+Files: pages/sql.html, games/sql.js
+---
+Show a partially complete SQL query with blanks (e.g. "SELECT
+___ FROM employees WHERE ___"). User types in the missing
+keywords or values. On submission, check the answer against
+the expected solution and show correct/incorrect feedback.
+Cover clauses like SELECT, WHERE, JOIN, GROUP BY, ORDER BY.
+Queries can be stored in data/sql-queries.js.
 
-Testing:
-- Answer validation
-- Explanation visibility
+---
 
+FEATURE 6 — Image Riddles
+Files: pages/riddles.html, games/riddles.js
+---
+Display an image that visually hints at a programming concept,
+term, or technology (e.g. a spider web = "Web Crawling"). User
+types their guess into an input field. If correct, move to the
+next riddle. Show score at the end. Riddle data (image path +
+answer) can be stored in data/riddles.js.
 
-Feature 4: Resume Keyword Matcher
-Description:
-Upload resume text and match keywords with job role.
+---
 
-Expected Output:
-- Resume input
-- Job role input
-- Match percentage displayed
+FEATURE 7 — DSA Match the Following
+Files: pages/dsa-match.html, games/dsa-match.js
+---
+Two columns are shown — left column has DSA terms (e.g. "Binary
+Search Tree"), right column has shuffled definitions or
+properties. User draws a line or selects pairs to match them.
+On submission, highlight correct and incorrect matches. Score
+is shown at the end. Data can be stored in data/dsa-paris.js.
 
-Testing:
-- Keyword extraction
-- Matching accuracy
+---
 
+FEATURE 8 — Debug the Code
+Files: pages/debug.html, games/debug.js
+---
+Show a code snippet (in any language — JS, Python, Java, etc.)
+that contains one or more intentional bugs. User reads the code
+and identifies the bug by either selecting the buggy line or
+typing the fix. Validate the answer and explain what was wrong.
+Include at least 5 different snippets of varying difficulty.
 
-Feature 5: SQL Fill in the Blanks
-Description:
-Provide incomplete SQL queries. User fills missing parts.
+---
 
-Expected Output:
-- Input fields
-- Correct/incorrect validation
-- At least 5 queries
+FEATURE 9 — Feedback System
+Files: pages/feedback.html, games/feedback.js
+---
+A simple form where users rate the platform (1–5 stars) and
+leave a short comment. Optionally, let them rate individual
+modules. Store all feedback entries in localStorage. Show a
+summary view of past feedback — average rating and recent
+comments. No external service needed.
 
-Testing:
-- Input validation
-- Answer checking
+---
 
+FEATURE 10 — Progress Dashboard
+Files: dashboard.html, scripts/storage.js
+---
+A visual summary of the user's activity across all modules.
+Show scores, number of attempts, and completion status for
+each module. Pull data from localStorage that other modules
+save during gameplay. Use simple visual indicators (progress
+bars, score cards) to make it easy to read at a glance.
 
-Feature 6: Image Riddles
-Description:
-Show image-based riddles and accept user answers.
-
-Expected Output:
-- Image display
-- Input field
-- Correct answer validation
-
-Testing:
-- Input matching
-- Case handling
-
-
-Feature 7: DSA Match the Following
-Description:
-Two columns. User connects items using mouse.
-
-Expected Output:
-- Draw lines between items
-- Validate matches
-
-Testing:
-- Line drawing
-- Correct mapping
-
-
-Feature 8: Debug the Code
-Description:
-Display code snippet with errors. User selects incorrect line.
-
-Expected Output:
-- Code display
-- Clickable lines
-- Highlight correct error
-
-Testing:
-- Selection validation
-
-
-Feature 9: Feedback System
-Description:
-User gives rating using stars and optional comment.
-
-Expected Output:
-- Star selection UI
-- Save feedback using localStorage
-
-Testing:
-- Rating storage
-- UI interaction
-
-
-Feature 10: Dashboard
-Description:
-Display user progress and scores.
-
-Expected Output:
-- Total score
-- Completed modules
-- Progress bar
-
-Testing:
-- Data retrieval from localStorage
+---
