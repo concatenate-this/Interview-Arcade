@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game | Interview Arcade</title>
+    <link rel="stylesheet" href="../styles/memory.css">
+</head>
+<body>
+    <header class="arcade-header">
+        <a href="../modules.html" class="nav-link">← Back to Modules</a>
+        <h1>Memory Card Game: CS Concepts</h1>
+        <p class="subtitle">Match the technical term with its correct definition or property.</p>
+    </header>
+
+    <main class="game-container">
+        <div class="stats-panel">
+            <div class="stat-box">Attempts: <span id="attempts">0</span></div>
+            <div class="stat-box">Time: <span id="time">00:00</span></div>
+            <div class="stat-box">Matches: <span id="matches">0</span> / 8</div>
+        </div>
+
+        <div class="memory-grid" id="memory-grid">
+            </div>
+
+        <div id="game-over-panel" class="hidden">
+            <h2>Module Complete</h2>
+            <p>Your performance has been recorded.</p>
+            <button id="restart-btn">Play Again</button>
+        </div>
+    </main>
+
+    <script src="../games/memory.js"></script>
+</body>
+</html>
